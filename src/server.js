@@ -6,7 +6,6 @@
 //   console.log(`API running on http://localhost:${PORT}`);
 // });
 
-
 require("dotenv").config();
 const app = require("./app");
 

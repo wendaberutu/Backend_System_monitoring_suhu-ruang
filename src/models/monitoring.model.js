@@ -24,10 +24,10 @@ JOIN tb_ruangan_gedung r
 
 LEFT JOIN (
   SELECT h1.*
-  FROM tb_suhu_kelembapan_ruang_baru_dummy h1
+  FROM tb_suhu_kelembapan_ruang h1
   JOIN (
     SELECT kode_alat, MAX(created_at) AS max_created
-    FROM tb_suhu_kelembapan_ruang_baru_dummy
+    FROM tb_suhu_kelembapan_ruang
     GROUP BY kode_alat
   ) h2
     ON h1.kode_alat = h2.kode_alat
